@@ -1,13 +1,4 @@
-from random import randint
-
-
 class Game():
-
-    def __init__(self):
-        self.min_value = 1
-        self.max_value = 10
-        self.random_value = randint(self.min_value, self.max_value)
-        self.start_game()
 
     def __del__(self):
         print('Game over')

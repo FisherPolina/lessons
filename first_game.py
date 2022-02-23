@@ -1,7 +1,12 @@
 from Game import Game
-
+from random import randint
 
 class FirstGame(Game):
+    def __init__(self):
+        self.min_value = 1
+        self.max_value = 10
+        self.random_value = randint(self.min_value, self.max_value)
+        self.start_game()
 
     def start_game(self) -> None:
         self.input_value = input('Введи число от 1 до 10\n')  # можно было сделать int(input), но хотелось побаловаться с валидацией
