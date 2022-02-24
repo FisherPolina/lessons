@@ -25,7 +25,7 @@ class Game():
             print('Ну рили? Ты не можешь цифру от чего-то другого отличить?')
             return False
 
-    def limit_validation(self) -> bool:
+    def range_validation(self) -> bool:
         if (int(self.min_value) != int(self.max_value)) and (self.help_input != '='):
             if 1 <= int(self.min_value) + 1 <= 10 and 1 <= int(self.max_value) - 1 <= 10:
                 return True
