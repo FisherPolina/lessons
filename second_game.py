@@ -12,13 +12,13 @@ class SecondGame(Game):
                 print('Я молодец!')
                 break
             elif self.help_input == '<':
-                if not self.range_validation():
+                if self.range_validation():
                     break
                 print(f'{self.nonrandom_value} больше того, что ты загадал')
                 self.max_value = (self.nonrandom_value) - 1
                 self.nonrandom_value = ((self.min_value + self.max_value) // 2)
             elif self.help_input == '>':
-                if not self.range_validation():
+                if self.range_validation():
                     break
                 print(f'{self.random_value} меньше того, что ты загадал')
                 self.min_value = int(self.nonrandom_value) + 1
